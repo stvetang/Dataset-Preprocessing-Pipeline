@@ -21,4 +21,6 @@ git clone https://github.com/<your-username>/dataset-preprocessing-pipeline.git
 ```
 
 2. Install dependencies:
+```bash
 pip install pandas
+```
