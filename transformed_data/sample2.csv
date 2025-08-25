@@ -1,0 +1,4 @@
+name,age,email,age_group,name_length,email_domain
+Vince,22.0,vince@example.com,Adult,5,example.com
+John,56.0,john@example.com,Middle Age,4,example.com
+Will,39.0,will@example.com,Middle Age,4,example.com
