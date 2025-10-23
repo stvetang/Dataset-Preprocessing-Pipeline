@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres:13
     environment:
-      - POSTGRES_USER=airflow
+      - POSTGRES_USER=airflow          
       - POSTGRES_PASSWORD=airflow
       - POSTGRES_DB=airflow
     volumes:
@@ -37,8 +37,18 @@ services:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
       - AIRFLOW__CORE__FERNET_KEY=your_fernet_key_here
-      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True           
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
+
+      # Auto-create admin user
+      - _AIRFLOW_WWW_USER_CREATE=True
+      - _AIRFLOW_WWW_USER_USERNAME=admin
+      - _AIRFLOW_WWW_USER_PASSWORD=admin
+      - _AIRFLOW_WWW_USER_FIRSTNAME=Admin
+      - _AIRFLOW_WWW_USER_LASTNAME=User
+      - _AIRFLOW_WWW_USER_EMAIL=admin@example.com
+      - _AIRFLOW_WWW_USER_ROLE=Admin
+
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -46,7 +56,19 @@ services:
       - ./requirements.txt:/requirements.txt
     ports:
       - "8080:8080"
-    command: bash -c "pip install -r /requirements.txt && airflow webserver"
+    command: >
+      bash -c "
+        pip install -r /requirements.txt && 
+        airflow db upgrade &&
+        airflow users create \
+          --username $$(_AIRFLWO_WWW_USER_USERNAME) \
+          --password $$(_AIRFLOW_WWW_USER_PASSWORD) \
+          --firstname $$(_AIRFLOW_WWW_USER_FIRSTNAME) \
+          --lastname $$(_AIRFLOW_WWW_USER_LASTNAME) \
+          --role $$(_AIRFLOW_WWW_USER_ROLE) \
+          --email $$(_AIRFLOW_WWW_USER_EMAIL) || true &&
+        airflow webserver
+      "
     networks:
       - airflow
 
@@ -65,6 +87,23 @@ services:
       - ./airflow/plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
+    networks:
+      - airflow
+
+  airflow-init:
+    image: apache/airflow:2.10.2
+    entrypoint: /bin/bash
+    command: -c "pip install -r /requirements.txt && airflow db init"
+    environment: 
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+    volumes: 
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      - ./requirements.txt:/requirements.txt
+    depends_on:
+      - postgres
     networks:
       - airflow
 
