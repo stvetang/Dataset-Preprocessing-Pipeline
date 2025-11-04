@@ -20,10 +20,15 @@ with DAG(
         bash_command="python /path/to/dataset_pipeline/scripts/transform_data.py"
     )
 
-    load = BashOperator(
-        task_id="load_data",
+    load_postgres = BashOperator(
+        task_id="load_to_postgres",
         bash_command="python /path/to/dataset_pipeline/scripts/load_to_postgres.py"
     )
 
+    load_mongodb = BashOperator(
+        task_id="load_to_mongodb",
+        bash_command="python /opt/airflow/dags/load_to_mongodb.py"
+    )
+
     # Define workflow order
-    ingest >> transform >> load
+    ingest >> transform >> [load_postgres, load_mongodb]
