@@ -922,3 +922,17 @@
 [2025-11-04T23:04:06.966+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:04:06.965+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-11-04T23:04:06.992+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:04:06.991+0000] {dag.py:4180} INFO - Setting next_dagrun for etl_pipeline to 2025-11-04 00:00:00+00:00, run_after=2025-11-05 00:00:00+00:00
 [2025-11-04T23:04:07.011+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.109 seconds
+[2025-11-04T23:04:37.214+0000] {processor.py:186} INFO - Started process (PID=489) to work on /opt/airflow/dags/etl_pipeline_dag.py
+[2025-11-04T23:04:37.215+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl_pipeline_dag.py for tasks to queue
+[2025-11-04T23:04:37.217+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:04:37.217+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py
+[2025-11-04T23:04:37.240+0000] {processor.py:925} INFO - DAG(s) 'etl_pipeline' retrieved from /opt/airflow/dags/etl_pipeline_dag.py
+[2025-11-04T23:04:37.268+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:04:37.267+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-11-04T23:04:37.291+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:04:37.291+0000] {dag.py:4180} INFO - Setting next_dagrun for etl_pipeline to 2025-11-04 00:00:00+00:00, run_after=2025-11-05 00:00:00+00:00
+[2025-11-04T23:04:37.311+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.105 seconds
+[2025-11-04T23:05:07.544+0000] {processor.py:186} INFO - Started process (PID=500) to work on /opt/airflow/dags/etl_pipeline_dag.py
+[2025-11-04T23:05:07.545+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/etl_pipeline_dag.py for tasks to queue
+[2025-11-04T23:05:07.548+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:05:07.548+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py
+[2025-11-04T23:05:07.569+0000] {processor.py:925} INFO - DAG(s) 'etl_pipeline' retrieved from /opt/airflow/dags/etl_pipeline_dag.py
+[2025-11-04T23:05:07.595+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:05:07.595+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-11-04T23:05:07.619+0000] {logging_mixin.py:190} INFO - [2025-11-04T23:05:07.619+0000] {dag.py:4180} INFO - Setting next_dagrun for etl_pipeline to 2025-11-04 00:00:00+00:00, run_after=2025-11-05 00:00:00+00:00
+[2025-11-04T23:05:07.635+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/etl_pipeline_dag.py took 0.098 seconds
