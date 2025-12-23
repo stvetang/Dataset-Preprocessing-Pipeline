@@ -12,22 +12,22 @@ with DAG(
     
     ingest = BashOperator(
         task_id="ingest_data",
-        bash_command="python /path/to/dataset_pipeline/scripts/ingest_data.py"
+        bash_command="python /opt/airflow/dags/scripts/ingest_data.py"
     )
 
     transform = BashOperator(
         task_id="transform_data",
-        bash_command="python /path/to/dataset_pipeline/scripts/transform_data.py"
+        bash_command="python /opt/airflow/dags/scripts/transform_data.py"
     )
 
     load_postgres = BashOperator(
         task_id="load_to_postgres",
-        bash_command="python /path/to/dataset_pipeline/scripts/load_to_postgres.py"
+        bash_command="python /opt/airflow/dags/scripts/load_to_postgres.py"
     )
 
     load_mongodb = BashOperator(
         task_id="load_to_mongodb",
-        bash_command="python /opt/airflow/dags/load_to_mongodb.py"
+        bash_command="python /opt/airflow/dags/scripts/load_to_mongodb.py"
     )
 
     # Define workflow order

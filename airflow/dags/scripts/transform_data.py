@@ -1,14 +1,10 @@
 import os
 import pandas as pd
 
-# Base directory
-base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Input from ingest_data.py output
-processed_data_folder = os.path.join(base_dir, "processed_data")
+processed_data_folder = "/opt/airflow/dags/processed_data"
 
 # Output folder to transformed data
-transformed_data_folder = os.path.join(base_dir, "transformed_data")
+transformed_data_folder = "/opt/airflow/dags/transformed_data"
 os.makedirs(transformed_data_folder, exist_ok=True)
 
 # List all CSV files in the processed data folder

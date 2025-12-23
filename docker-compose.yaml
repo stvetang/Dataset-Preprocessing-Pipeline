@@ -6,9 +6,10 @@ services:
     environment:
       - POSTGRES_USER=airflow          
       - POSTGRES_PASSWORD=airflow
-      - POSTGRES_DB=airflow
+      - POSTGRES_DB=etl_project
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./postgres/:/docker-entrypoint-initdb.d/
     networks:
       - airflow
     healthcheck:
@@ -35,7 +36,7 @@ services:
         condition: service_healthy
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/etl_project
       - AIRFLOW__CORE__FERNET_KEY=your_fernet_key_here
       - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=True           
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
@@ -80,7 +81,7 @@ services:
         condition: service_healthy
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/etl_project
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs    
@@ -96,7 +97,7 @@ services:
     command: -c "pip install -r /requirements.txt && airflow db init"
     environment: 
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/etl_project
     volumes: 
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs

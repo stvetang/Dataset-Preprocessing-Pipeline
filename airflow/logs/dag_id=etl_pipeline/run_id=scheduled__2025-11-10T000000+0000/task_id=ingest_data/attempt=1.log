@@ -1,0 +1,34 @@
+[2025-11-11T23:29:54.034+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-11T23:29:54.050+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.ingest_data scheduled__2025-11-10T00:00:00+00:00 [queued]>
+[2025-11-11T23:29:54.058+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.ingest_data scheduled__2025-11-10T00:00:00+00:00 [queued]>
+[2025-11-11T23:29:54.058+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-11T23:29:54.069+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): ingest_data> on 2025-11-10 00:00:00+00:00
+[2025-11-11T23:29:54.078+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline', 'ingest_data', 'scheduled__2025-11-10T00:00:00+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline_dag.py', '--cfg-path', '/tmp/tmpequgysia']
+[2025-11-11T23:29:54.081+0000] {standard_task_runner.py:105} INFO - Job 26: Subtask ingest_data
+[2025-11-11T23:29:54.081+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=403) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-11T23:29:54.081+0000] {standard_task_runner.py:72} INFO - Started process 404 to run task
+[2025-11-11T23:29:54.127+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_pipeline.ingest_data scheduled__2025-11-10T00:00:00+00:00 [running]> on host b4c6e0d2ed01
+[2025-11-11T23:29:54.195+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-10T00:00:00+00:00'
+[2025-11-11T23:29:54.196+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-11T23:29:54.215+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-11T23:29:54.216+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/dags/scripts/ingest_data.py']
+[2025-11-11T23:29:54.227+0000] {subprocess.py:86} INFO - Output:
+[2025-11-11T23:29:55.141+0000] {subprocess.py:93} INFO - Files in raw data folder: ['sample1.csv', 'sample2.csv']
+[2025-11-11T23:29:55.142+0000] {subprocess.py:93} INFO - 
+[2025-11-11T23:29:55.142+0000] {subprocess.py:93} INFO - Processed sample1.csv saved to /opt/***/dags/processed_data/sample1.csv
+[2025-11-11T23:29:55.143+0000] {subprocess.py:93} INFO -       name   age                email
+[2025-11-11T23:29:55.143+0000] {subprocess.py:93} INFO - 0    Alice  25.0    alice@example.com
+[2025-11-11T23:29:55.144+0000] {subprocess.py:93} INFO - 1      Bob  30.0      bob@example.com
+[2025-11-11T23:29:55.144+0000] {subprocess.py:93} INFO - 2  Charlie  27.5  charlie@example.com
+[2025-11-11T23:29:55.144+0000] {subprocess.py:93} INFO - 
+[2025-11-11T23:29:55.144+0000] {subprocess.py:93} INFO - Processed sample2.csv saved to /opt/***/dags/processed_data/sample2.csv
+[2025-11-11T23:29:55.145+0000] {subprocess.py:93} INFO -     name   age              email
+[2025-11-11T23:29:55.145+0000] {subprocess.py:93} INFO - 0  Vince  22.0  vince@example.com
+[2025-11-11T23:29:55.145+0000] {subprocess.py:93} INFO - 1   John  56.0   john@example.com
+[2025-11-11T23:29:55.146+0000] {subprocess.py:93} INFO - 2   Will  39.0   will@example.com
+[2025-11-11T23:29:55.214+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-11T23:29:55.236+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-11T23:29:55.237+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_pipeline, task_id=ingest_data, run_id=scheduled__2025-11-10T00:00:00+00:00, execution_date=20251110T000000, start_date=20251111T232954, end_date=20251111T232955
+[2025-11-11T23:29:55.260+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-11T23:29:55.281+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-11T23:29:55.283+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

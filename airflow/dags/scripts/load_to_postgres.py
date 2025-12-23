@@ -9,9 +9,9 @@ transformed_data_folder = os.path.join(base_dir, "transformed_data")
 # Establish connection to PostgreSQL
 conn = psycopg2.connect(
     dbname="etl_project",
-    user="postgres",
-    password="postgres",
-    host="localhost",
+    user="airflow",
+    password="airflow",
+    host="postgres",
     port="5432"
 )
 cur = conn.cursor()

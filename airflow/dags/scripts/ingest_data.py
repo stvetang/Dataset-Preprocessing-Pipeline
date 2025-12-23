@@ -1,13 +1,8 @@
 import os
 import pandas as pd
 
-# Base directory
-base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Define the path to the raw data folder
-raw_data_folder = os.path.join(base_dir, "raw_data")
-
-processed_data_folder = os.path.join(base_dir, "processed_data")
+raw_data_folder = "/opt/airflow/dags/raw_data"
+processed_data_folder = "/opt/airflow/dags/processed_data"
 
 # List all CSV files in the raw data folder
 files = os.listdir(raw_data_folder)
