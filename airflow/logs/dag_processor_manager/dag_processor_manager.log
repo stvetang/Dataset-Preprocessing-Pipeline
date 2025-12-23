@@ -20801,3 +20801,25 @@ File Path                                     PID    Runtime      # DAGs    # Er
 /opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.57s           2025-12-23T02:03:34                      10
 /opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.11s           2025-12-23T02:03:19                      12
 ================================================================================
+[2025-12-23T02:04:18.443+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.58s           2025-12-23T02:04:05                      10
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.55s           2025-12-23T02:04:02                       3
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.55s           2025-12-23T02:04:02                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.11s           2025-12-23T02:03:49                      12
+================================================================================
+[2025-12-23T02:04:47.303+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.58s           2025-12-23T02:04:36                      10
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.54s           2025-12-23T02:04:33                       3
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.53s           2025-12-23T02:04:33                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.12s           2025-12-23T02:04:20                      12
+================================================================================

@@ -3578,3 +3578,21 @@ Transformed sample2.csv saved to /opt/airflow/dags/transformed_data/sample2.csv
 2   Will  39.0   will@example.com  Middle Age            4  example.com
 [2025-12-23T02:04:33.517+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/scripts/transform_data.py
 [2025-12-23T02:04:33.528+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/transform_data.py took 0.504 seconds
+[2025-12-23T02:05:04.194+0000] {processor.py:186} INFO - Started process (PID=5331) to work on /opt/airflow/dags/scripts/transform_data.py
+[2025-12-23T02:05:04.195+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/transform_data.py for tasks to queue
+[2025-12-23T02:05:04.198+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:05:04.197+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/transform_data.py
+[2025-12-23T02:05:04.138+0000] {logging_mixin.py:190} INFO - Files in processed data folder: ['sample1.csv', 'sample2.csv']
+[2025-12-23T02:05:04.150+0000] {logging_mixin.py:190} INFO - 
+Transformed sample1.csv saved to /opt/airflow/dags/transformed_data/sample1.csv
+[2025-12-23T02:05:04.155+0000] {logging_mixin.py:190} INFO -       name   age                email age_group  name_length email_domain
+0    Alice  25.0    alice@example.com     Adult            5  example.com
+1      Bob  30.0      bob@example.com     Adult            3  example.com
+2  Charlie  27.5  charlie@example.com     Adult            7  example.com
+[2025-12-23T02:05:04.165+0000] {logging_mixin.py:190} INFO - 
+Transformed sample2.csv saved to /opt/airflow/dags/transformed_data/sample2.csv
+[2025-12-23T02:05:03.275+0000] {logging_mixin.py:190} INFO -     name   age              email   age_group  name_length email_domain
+0  Vince  22.0  vince@example.com       Adult            5  example.com
+1   John  56.0   john@example.com  Middle Age            4  example.com
+2   Will  39.0   will@example.com  Middle Age            4  example.com
+[2025-12-23T02:05:03.276+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/scripts/transform_data.py
+[2025-12-23T02:05:03.286+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/transform_data.py took 0.542 seconds
