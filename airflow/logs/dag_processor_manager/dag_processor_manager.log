@@ -20733,3 +20733,71 @@ File Path                                       PID  Runtime      # DAGs    # Er
 /opt/airflow/dags/scripts/ingest_data.py       5144  0.08s             0           0  0.53s           2025-12-23T02:00:25                       3
 /opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.12s           2025-12-23T02:00:47                      12
 ================================================================================
+[2025-12-23T02:01:24.410+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.57s           2025-12-23T02:00:56                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.57s           2025-12-23T02:00:59                      10
+/opt/airflow/dags/scripts/transform_data.py                            0           1  0.57s           2025-12-23T02:00:56                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.11s           2025-12-23T02:01:17                      12
+================================================================================
+[2025-12-23T02:01:29.022+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2025-12-23T02:01:29.136+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2025-12-23T02:01:53.858+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.62s           2025-12-23T02:01:26                       3
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.59s           2025-12-23T02:01:26                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.58s           2025-12-23T02:01:30                      10
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.11s           2025-12-23T02:01:47                      12
+================================================================================
+[2025-12-23T02:02:23.099+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.54s           2025-12-23T02:01:58                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.53s           2025-12-23T02:02:02                      10
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.52s           2025-12-23T02:01:58                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.27s           2025-12-23T02:02:18                      12
+================================================================================
+[2025-12-23T02:02:51.818+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.64s           2025-12-23T02:02:29                       3
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.64s           2025-12-23T02:02:29                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.58s           2025-12-23T02:02:32                      10
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.26s           2025-12-23T02:02:49                      12
+================================================================================
+[2025-12-23T02:03:20.565+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.55s           2025-12-23T02:03:03                      10
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.54s           2025-12-23T02:03:00                       3
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.53s           2025-12-23T02:03:00                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.11s           2025-12-23T02:03:19                      12
+================================================================================
+[2025-12-23T02:03:49.377+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/ingest_data.py                               0           0  0.64s           2025-12-23T02:03:31                       3
+/opt/airflow/dags/scripts/transform_data.py                            0           0  0.63s           2025-12-23T02:03:31                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                           1           0  0.57s           2025-12-23T02:03:34                      10
+/opt/airflow/dags/etl_pipeline_dag.py                                  1           0  0.11s           2025-12-23T02:03:19                      12
+================================================================================
