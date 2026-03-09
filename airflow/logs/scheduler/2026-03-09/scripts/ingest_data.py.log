@@ -1,0 +1,54 @@
+[2026-03-09T21:50:31.052+0000] {processor.py:186} INFO - Started process (PID=200) to work on /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:50:31.054+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/ingest_data.py for tasks to queue
+[2026-03-09T21:50:31.056+0000] {logging_mixin.py:190} INFO - [2026-03-09T21:50:31.056+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:50:31.739+0000] {logging_mixin.py:190} INFO - Files in raw data folder: ['sample1.csv', 'sample2.csv']
+[2026-03-09T21:50:31.756+0000] {logging_mixin.py:190} INFO - 
+Processed sample1.csv saved to /opt/airflow/dags/processed_data/sample1.csv
+[2026-03-09T21:50:31.760+0000] {logging_mixin.py:190} INFO -       name   age                email
+0    Alice  25.0    alice@example.com
+1      Bob  30.0      bob@example.com
+2  Charlie  27.5  charlie@example.com
+[2026-03-09T21:50:31.767+0000] {logging_mixin.py:190} INFO - 
+Processed sample2.csv saved to /opt/airflow/dags/processed_data/sample2.csv
+[2026-03-09T21:50:31.770+0000] {logging_mixin.py:190} INFO -     name   age              email
+0  Vince  22.0  vince@example.com
+1   John  56.0   john@example.com
+2   Will  39.0   will@example.com
+[2026-03-09T21:50:31.771+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:50:31.781+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/ingest_data.py took 0.735 seconds
+[2026-03-09T21:51:02.188+0000] {processor.py:186} INFO - Started process (PID=223) to work on /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:51:02.189+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/ingest_data.py for tasks to queue
+[2026-03-09T21:51:02.192+0000] {logging_mixin.py:190} INFO - [2026-03-09T21:51:02.191+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:51:02.633+0000] {logging_mixin.py:190} INFO - Files in raw data folder: ['sample1.csv', 'sample2.csv']
+[2026-03-09T21:51:02.644+0000] {logging_mixin.py:190} INFO - 
+Processed sample1.csv saved to /opt/airflow/dags/processed_data/sample1.csv
+[2026-03-09T21:51:02.647+0000] {logging_mixin.py:190} INFO -       name   age                email
+0    Alice  25.0    alice@example.com
+1      Bob  30.0      bob@example.com
+2  Charlie  27.5  charlie@example.com
+[2026-03-09T21:51:02.653+0000] {logging_mixin.py:190} INFO - 
+Processed sample2.csv saved to /opt/airflow/dags/processed_data/sample2.csv
+[2026-03-09T21:51:02.656+0000] {logging_mixin.py:190} INFO -     name   age              email
+0  Vince  22.0  vince@example.com
+1   John  56.0   john@example.com
+2   Will  39.0   will@example.com
+[2026-03-09T21:51:02.656+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:51:02.667+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/ingest_data.py took 0.485 seconds
+[2026-03-09T21:51:33.057+0000] {processor.py:186} INFO - Started process (PID=246) to work on /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:51:33.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/ingest_data.py for tasks to queue
+[2026-03-09T21:51:33.060+0000] {logging_mixin.py:190} INFO - [2026-03-09T21:51:33.060+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:51:33.513+0000] {logging_mixin.py:190} INFO - Files in raw data folder: ['sample1.csv', 'sample2.csv']
+[2026-03-09T21:51:33.523+0000] {logging_mixin.py:190} INFO - 
+Processed sample1.csv saved to /opt/airflow/dags/processed_data/sample1.csv
+[2026-03-09T21:51:33.527+0000] {logging_mixin.py:190} INFO -       name   age                email
+0    Alice  25.0    alice@example.com
+1      Bob  30.0      bob@example.com
+2  Charlie  27.5  charlie@example.com
+[2026-03-09T21:51:33.536+0000] {logging_mixin.py:190} INFO - 
+Processed sample2.csv saved to /opt/airflow/dags/processed_data/sample2.csv
+[2026-03-09T21:51:33.538+0000] {logging_mixin.py:190} INFO -     name   age              email
+0  Vince  22.0  vince@example.com
+1   John  56.0   john@example.com
+2   Will  39.0   will@example.com
+[2026-03-09T21:51:33.539+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/scripts/ingest_data.py
+[2026-03-09T21:51:33.550+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/ingest_data.py took 0.499 seconds

@@ -1,6 +1,27 @@
 version: '3'
 
 services:
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_DB=etl_project
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - MONGO_HOST=mongodb
+      - MONGO_PORT=27017
+      - AIRFLOW_WEBSERVER_URL=httpL//webserver:8080
+    depends_on:
+      - postgres
+      - mongodb
+      - webserver
+    networks:
+      - airflow
+    volumes:
+      - ./airflow/dags/raw_data:/app/raw_data
+
   postgres:
     image: postgres:13
     environment:

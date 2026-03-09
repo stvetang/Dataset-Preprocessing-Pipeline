@@ -1328,3 +1328,248 @@
 [2025-12-23T02:05:07.858+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:05:07.857+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-12-23T02:05:07.868+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:05:07.868+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
 [2025-12-23T02:05:07.882+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.515 seconds
+[2025-12-23T02:05:37.999+0000] {processor.py:186} INFO - Started process (PID=5363) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:05:38.002+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:05:38.004+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:05:38.004+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:05:38.470+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:05:38.490+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:05:38.489+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:05:38.502+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:05:38.502+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:05:38.519+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.526 seconds
+[2025-12-23T02:06:09.020+0000] {processor.py:186} INFO - Started process (PID=5386) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:06:09.021+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:06:09.024+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:06:09.023+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:06:09.531+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:06:09.553+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:06:09.553+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:06:09.564+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:06:09.563+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:06:09.577+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.563 seconds
+[2025-12-23T02:06:39.704+0000] {processor.py:186} INFO - Started process (PID=5409) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:06:39.705+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:06:39.707+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:06:39.707+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:06:40.167+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:06:40.186+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:06:40.186+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:06:40.197+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:06:40.196+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:06:40.211+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.512 seconds
+[2025-12-23T02:07:10.297+0000] {processor.py:186} INFO - Started process (PID=5432) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:07:10.298+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:07:10.301+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:07:10.300+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:07:10.783+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:07:10.802+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:07:10.801+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:07:10.812+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:07:10.812+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:07:10.826+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.534 seconds
+[2025-12-23T02:07:41.128+0000] {processor.py:186} INFO - Started process (PID=5455) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:07:41.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:07:41.132+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:07:41.131+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:07:41.593+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:07:41.611+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:07:41.610+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:07:41.621+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:07:41.621+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:07:41.636+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.513 seconds
+[2025-12-23T02:08:12.184+0000] {processor.py:186} INFO - Started process (PID=5478) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:08:12.185+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:08:12.188+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:08:12.187+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:08:12.623+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:08:12.641+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:08:12.641+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:08:12.652+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:08:12.652+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:08:12.665+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.486 seconds
+[2025-12-23T02:08:42.958+0000] {processor.py:186} INFO - Started process (PID=5501) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:08:42.959+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:08:42.962+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:08:42.962+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:08:43.465+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:08:43.486+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:08:43.485+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:08:43.498+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:08:43.498+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:08:43.519+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.567 seconds
+[2025-12-23T02:09:13.909+0000] {processor.py:186} INFO - Started process (PID=5524) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:09:13.910+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:09:13.913+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:09:13.912+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:09:14.388+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:09:14.411+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:09:14.411+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:09:14.426+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:09:14.426+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:09:14.445+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.541 seconds
+[2025-12-23T02:09:44.526+0000] {processor.py:186} INFO - Started process (PID=5547) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:09:44.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:09:44.530+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:09:44.529+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:09:45.033+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:09:45.052+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:09:45.051+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:09:45.063+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:09:45.062+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:09:45.077+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.557 seconds
+[2025-12-23T02:10:15.198+0000] {processor.py:186} INFO - Started process (PID=5570) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:10:15.199+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:10:15.201+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:10:15.201+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:10:15.677+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:10:15.695+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:10:15.694+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:10:15.704+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:10:15.704+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:10:15.717+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.525 seconds
+[2025-12-23T02:10:46.303+0000] {processor.py:186} INFO - Started process (PID=5593) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:10:46.304+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:10:46.306+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:10:46.306+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:10:46.783+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:10:46.803+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:10:46.803+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:10:46.814+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:10:46.814+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:10:46.830+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.531 seconds
+[2025-12-23T02:11:17.100+0000] {processor.py:186} INFO - Started process (PID=5616) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:11:17.101+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:11:17.103+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:11:17.103+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:11:17.569+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:11:17.587+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:11:17.587+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:11:17.598+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:11:17.598+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:11:17.611+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.516 seconds
+[2025-12-23T02:11:48.082+0000] {processor.py:186} INFO - Started process (PID=5639) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:11:48.083+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:11:48.085+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:11:48.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:11:48.552+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:11:48.572+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:11:48.572+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:11:48.583+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:11:48.583+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:11:48.599+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.523 seconds
+[2025-12-23T02:12:19.247+0000] {processor.py:186} INFO - Started process (PID=5662) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:12:19.248+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:12:19.250+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:12:19.249+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:12:19.708+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:12:19.726+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:12:19.726+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:12:19.736+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:12:19.736+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:12:19.751+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.510 seconds
+[2025-12-23T02:12:50.024+0000] {processor.py:186} INFO - Started process (PID=5685) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:12:50.025+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:12:50.027+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:12:50.027+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:12:50.501+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:12:50.518+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:12:50.518+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:12:50.528+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:12:50.528+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:12:50.542+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.525 seconds
+[2025-12-23T02:13:20.745+0000] {processor.py:186} INFO - Started process (PID=5708) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:13:20.747+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:13:20.749+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:13:20.749+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:13:21.240+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:13:21.258+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:13:21.257+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:13:21.269+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:13:21.269+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:13:21.284+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.545 seconds
+[2025-12-23T02:13:51.793+0000] {processor.py:186} INFO - Started process (PID=5731) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:13:51.794+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:13:51.797+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:13:51.797+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:13:52.298+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:13:52.319+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:13:52.319+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:13:52.330+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:13:52.330+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:13:52.343+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.556 seconds
+[2025-12-23T02:14:22.603+0000] {processor.py:186} INFO - Started process (PID=5754) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:14:22.604+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:14:22.607+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:14:22.606+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:14:23.056+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:14:23.074+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:14:23.074+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:14:23.085+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:14:23.084+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:14:23.099+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.502 seconds
+[2025-12-23T02:14:53.596+0000] {processor.py:186} INFO - Started process (PID=5777) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:14:53.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:14:53.599+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:14:53.599+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:14:54.059+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:14:54.077+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:14:54.076+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:14:54.087+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:14:54.087+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:14:54.102+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.511 seconds
+[2025-12-23T02:15:24.787+0000] {processor.py:186} INFO - Started process (PID=5800) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:15:24.788+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:15:24.791+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:15:24.790+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:15:25.252+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:15:25.269+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:15:25.269+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:15:25.279+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:15:25.279+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:15:25.295+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.513 seconds
+[2025-12-23T02:15:55.909+0000] {processor.py:186} INFO - Started process (PID=5823) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:15:55.910+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:15:55.912+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:15:55.912+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:15:56.384+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:15:56.402+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:15:56.402+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:15:56.413+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:15:56.412+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:15:56.427+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.523 seconds
+[2025-12-23T02:16:26.591+0000] {processor.py:186} INFO - Started process (PID=5846) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:16:26.593+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:16:26.595+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:16:26.594+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:16:27.102+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:16:27.122+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:16:27.122+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:16:27.135+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:16:27.135+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:16:27.152+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.566 seconds
+[2025-12-23T02:16:57.868+0000] {processor.py:186} INFO - Started process (PID=5869) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:16:57.868+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:16:57.871+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:16:57.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:16:56.826+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:16:56.844+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:16:56.843+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:16:56.855+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:16:56.855+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:16:56.868+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.497 seconds
+[2025-12-23T02:17:27.471+0000] {processor.py:186} INFO - Started process (PID=5892) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:17:27.472+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:17:27.474+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:17:27.474+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:17:27.971+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:17:27.990+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:17:27.990+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:17:28.000+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:17:28.000+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:17:28.014+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.550 seconds
+[2025-12-23T02:17:58.100+0000] {processor.py:186} INFO - Started process (PID=5915) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:17:58.101+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:17:58.104+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:17:58.103+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:17:58.545+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:17:58.562+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:17:58.562+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:17:58.572+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:17:58.572+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:17:58.587+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.492 seconds
+[2025-12-23T02:18:28.648+0000] {processor.py:186} INFO - Started process (PID=5938) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:18:28.649+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:18:28.651+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:18:28.651+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:18:29.123+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:18:29.142+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:18:29.141+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:18:29.152+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:18:29.152+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:18:29.168+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.525 seconds
+[2025-12-23T02:18:59.252+0000] {processor.py:186} INFO - Started process (PID=5961) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:18:59.253+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:18:59.255+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:18:59.255+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:18:59.737+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:18:59.756+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:18:59.755+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:18:59.768+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:18:59.768+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:18:59.783+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.537 seconds
+[2025-12-23T02:19:30.685+0000] {processor.py:186} INFO - Started process (PID=5984) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:19:30.686+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:19:30.688+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:19:30.687+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:19:31.156+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:19:31.174+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:19:31.174+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:19:31.185+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:19:31.185+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:19:31.200+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.520 seconds
+[2025-12-23T02:20:01.272+0000] {processor.py:186} INFO - Started process (PID=6007) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:20:01.273+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:20:01.275+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:20:01.275+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:20:01.753+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:20:01.771+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:20:01.771+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:20:01.780+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:20:01.780+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:20:01.793+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.527 seconds
+[2025-12-23T02:20:32.072+0000] {processor.py:186} INFO - Started process (PID=6030) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:20:32.074+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:20:32.077+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:20:32.076+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:20:32.562+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:20:32.582+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:20:32.581+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:20:32.592+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:20:32.592+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:20:32.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.541 seconds
+[2025-12-23T02:21:02.994+0000] {processor.py:186} INFO - Started process (PID=6053) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:21:02.995+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:21:02.998+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:21:02.998+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:21:03.463+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:21:03.482+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:21:03.482+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:21:03.493+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:21:03.493+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:21:03.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.518 seconds
+[2025-12-23T02:21:34.069+0000] {processor.py:186} INFO - Started process (PID=6076) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:21:34.070+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:21:34.072+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:21:34.071+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:21:34.571+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:21:34.589+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:21:34.589+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:21:34.600+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:21:34.600+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:21:34.614+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.551 seconds
+[2025-12-23T02:22:05.046+0000] {processor.py:186} INFO - Started process (PID=6099) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:22:05.046+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:22:05.050+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:22:05.049+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:22:05.652+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:22:05.673+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:22:05.673+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:22:05.683+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:22:05.683+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:22:05.695+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.657 seconds
+[2025-12-23T02:22:35.829+0000] {processor.py:186} INFO - Started process (PID=6122) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:22:35.830+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:22:35.834+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:22:35.834+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:22:36.264+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:22:36.281+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:22:36.281+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:22:36.290+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:22:36.290+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:22:36.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.481 seconds
+[2025-12-23T02:23:07.215+0000] {processor.py:186} INFO - Started process (PID=6145) to work on /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:23:07.216+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/scripts/load_to_mongodb.py for tasks to queue
+[2025-12-23T02:23:07.219+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:23:07.218+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:23:07.794+0000] {processor.py:925} INFO - DAG(s) 'load_to_mongodb' retrieved from /opt/airflow/dags/scripts/load_to_mongodb.py
+[2025-12-23T02:23:07.813+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:23:07.813+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-12-23T02:23:07.824+0000] {logging_mixin.py:190} INFO - [2025-12-23T02:23:07.824+0000] {dag.py:4180} INFO - Setting next_dagrun for load_to_mongodb to None, run_after=None
+[2025-12-23T02:23:07.838+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/scripts/load_to_mongodb.py took 0.629 seconds
