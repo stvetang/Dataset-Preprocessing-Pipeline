@@ -26,7 +26,7 @@ def get_postgres_connection():
         conn = psycopg2.connect(**POSTGRES_CONFIG)
         return conn
     except Exception as e:
-        raise HTTPException(statis_code=500, detail=f"Databse connection failed: str{(e)}")
+        raise HTTPException(status_code=500, detail=f"Databse connection failed: str{(e)}")
     
 def get_mongo_client():
     try:
@@ -43,7 +43,7 @@ def root():
         "message": "ETL Pipeline API",
         "version": "1.0.0",
         "endpoints": {
-            "health": "/api/health",
+             "health": "/api/health",
             "data": "/api/data",
             "upload": "/api/upload",
             "mongodb": "/api/mongodb/data",
@@ -154,7 +154,7 @@ async def upload_csv(file: UploadFile = File(...)):
     
     # Validate file type
     if not file.filename.endswith('.csv'):
-        raise HTTPException(sttaus_code=400, detail="Only CSV files are allowed")
+        raise HTTPException(status_code=400, detail="Only CSV files are allowed")
     
     try:
         # Ensure raw_data directory exists
