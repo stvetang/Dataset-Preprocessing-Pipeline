@@ -100,11 +100,39 @@ http://localhost:8080
 ---
 
 ## Future Improvements
-* Cloud deployment (AWS, GCP, or Azure)
-* CI/CD integration
-* API-based ingestion
-* Data validation and unit testing
-* Monitoring and alerting
-* Analytics or machine learning layer
+- [ ] Cloud deployment (AWS, GCP, or Azure)
+- [ ] CI/CD integration
+- [x] API-based ingestion
+- [ ] Data validation and unit testing
+- [ ] Monitoring and alerting
+- [ ] Analytics or machine learning layer
 
 ---
+## API Layer
+
+The project includes a **FastAPI-based REST API** that provides programmatic access to the ETL pipeline:
+
+### Available Endpoints
+
+- **GET `/api/health`** - Health check for API and database connections
+- **GET `/api/data`** - Retrieve transformed data with pagination support
+- **GET `/api/data/{id}`** - Get specific record by ID
+- **POST `/api/upload`** - Upload CSV files for processing
+- **GET `/api/mongodb/data`** - Query data from MongoDB
+- **GET `/api/stats`** - Summary statistics and distributions
+- **DELETE `/api/data/{id}`** - Delete records from database
+
+### Interactive API Documentation
+Visit `http://localhost:5000/docs` for automatically generated Swagger UI documentation.
+
+### Example Usage
+```bash
+# Get all data
+curl http://localhost:5000/api/data
+
+# Upload new CSV
+curl -X POST http://localhost:5000/api/upload -F "file=@employees.csv"
+
+# Get statistics
+curl http://localhost:5000/api/stats
+```
