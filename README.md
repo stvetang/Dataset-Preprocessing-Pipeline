@@ -122,15 +122,15 @@ dataset_pipeline/
 
 ## Key Features
 
-✅ **Automated ETL Orchestration** - Apache Airflow manages task scheduling and dependencies  
-✅ **RESTful API** - FastAPI provides programmatic access to pipeline data and operations  
-✅ **Containerized Architecture** - Fully Dockerized microservices with Docker Compose  
-✅ **Polyglot Persistence** - Dual database integration (PostgreSQL for relational, MongoDB for document storage)  
-✅ **File Upload API** - Automated CSV ingestion via HTTP POST requests  
-✅ **Health Monitoring** - API endpoints for service health checks  
-✅ **Interactive Documentation** - Auto-generated Swagger UI at `/docs`  
-✅ **Data Validation** - Pandas-based CSV validation during upload  
-✅ **Task Retry Logic** - Airflow handles failures with automatic retries  
+- **Automated ETL Orchestration** - Apache Airflow manages task scheduling and dependencies  
+- **RESTful API** - FastAPI provides programmatic access to pipeline data and operations  
+- **Containerized Architecture** - Fully Dockerized microservices with Docker Compose  
+- **Polyglot Persistence** - Dual database integration (PostgreSQL for relational, MongoDB for document storage)  
+- **File Upload API** - Automated CSV ingestion via HTTP POST requests  
+- **Health Monitoring** - API endpoints for service health checks  
+- **Interactive Documentation** - Auto-generated Swagger UI at `/docs`  
+- **Data Validation** - Pandas-based CSV validation during upload  
+- **Task Retry Logic** - Airflow handles failures with automatic retries  
 
 ---
 
