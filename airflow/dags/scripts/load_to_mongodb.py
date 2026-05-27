@@ -11,7 +11,7 @@ def load_to_mongodb():
     collection = db["employees"]
 
     # Path to dataset
-    file_path = "/opt/airflow/dags/transformed_data/sample1.csv"
+    file_path = "/opt/airflow/dags/enriched_data/sample1.csv"
 
     # Read dataset using pandas
     df = pd.read_csv(file_path)

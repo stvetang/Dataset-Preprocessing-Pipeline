@@ -20,6 +20,16 @@ with DAG(
         bash_command="python /opt/airflow/dags/scripts/transform_data.py"
     )
 
+    detect_anomalies = BashOperator(
+        task_id="detect_anomalies",
+        bash_command="python /opt/airflow/dags/scripts/detect_anomalies.py"
+    )
+
+    enrich_with_llm = BashOperator(
+        task_id="enrich_with_llm",
+        bash_command="python /opt/airflow/dags/scripts/enrich_with_llm.py"
+    )
+
     load_postgres = BashOperator(
         task_id="load_to_postgres",
         bash_command="python /opt/airflow/dags/scripts/load_to_postgres.py"
@@ -31,4 +41,4 @@ with DAG(
     )
 
     # Define workflow order
-    ingest >> transform >> [load_postgres, load_mongodb]
+    ingest >> transform >> detect_anomalies >> enrich_with_llm >> [load_postgres, load_mongodb]
