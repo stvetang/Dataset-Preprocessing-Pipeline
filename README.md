@@ -318,7 +318,7 @@ API endpoints support `limit` and `offset` parameters for efficient large datase
 
 - [ ] Cloud deployment (AWS ECS, RDS, DocumentDB)
 - [ ] CI/CD pipeline with GitHub Actions
-- [x] ~~API-based ingestion~~ ✅ **Completed**
+- [x] ~~API-based ingestion~~
 - [ ] JWT authentication for API
 - [ ] Data validation with Great Expectations
 - [ ] Monitoring and alerting (Prometheus, Grafana)
