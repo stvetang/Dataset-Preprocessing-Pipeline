@@ -4,7 +4,7 @@ import time
 import pandas as pd
 from openai import OpenAI
 
-anomaly_data_foldr = "/opt/airflow/dags/anomaly_data"
+anomaly_data_folder = "/opt/airflow/dags/anomaly_data"
 enriched_data_folder = "/opt/airflow/dags/enriched_data"
 os.makedirs(enriched_data_folder, exist_ok=True)
 
@@ -12,7 +12,20 @@ os.makedirs(enriched_data_folder, exist_ok=True)
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 def build_prompt(row: dict) -> str:
-    """Build a prompt for the LLM based on the row data."""
+    
+    return f"""You are a data quality assistant. Analyze the user record and respond with a JSON object, no explanation or markdown.
+
+    Record:
+    - Name: {row.get('name', 'unkown')}
+    - Age: {row.get('age', 'unknown')}
+    - Email domain: {row.get('email_domain', 'unknown')}
+    - Flagged as anomaly: {row.get('is_anomaly', False)}
+
+    Return exactly this JSON format:
+    {{
+        "predicted_category": "<one of: personal, businexx, academic, government, unknown>",
+        "data_quality_notes": "<one sentence describing any data quality concerns or confirming the record looks clean>"
+    }}"""
 
 def call_llm(prompt: str, retries: int = 3) -> dict:
 
@@ -28,7 +41,7 @@ def call_llm(prompt: str, retries: int = 3) -> dict:
                 temperature=0.2,
             )
             # Raw text response from the LLM
-            raw_text - response.choices[0].message.content.strip()
+            raw_text = response.choices[0].message.content.strip()
             return json.loads(raw_text)
         
         except json.JSONDecodeError:
