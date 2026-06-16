@@ -79,19 +79,22 @@ services:
       - ./requirements.txt:/requirements.txt
     ports:
       - "8080:8080"
+      
+    # Remove any existing webserver PID file and install dependencies
     command: >
       bash -c "
+        rm -f /opt/airflow/airflow-webserver.pid &&     
         pip install -r /requirements.txt && 
         airflow db upgrade &&
         airflow users create \
           --username $$(_AIRFLWO_WWW_USER_USERNAME) \
-          --password $$(_AIRFLOW_WWW_USER_PASSWORD) \
+          --password $$(_AIRFLOW_WWW_USER_PASSWORD) \       
           --firstname $$(_AIRFLOW_WWW_USER_FIRSTNAME) \
           --lastname $$(_AIRFLOW_WWW_USER_LASTNAME) \
           --role $$(_AIRFLOW_WWW_USER_ROLE) \
           --email $$(_AIRFLOW_WWW_USER_EMAIL) || true &&
         airflow webserver
-      "
+      "     
     networks:
       - airflow
 

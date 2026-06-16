@@ -23,7 +23,7 @@ def build_prompt(row: dict) -> str:
 
     Return exactly this JSON format:
     {{
-        "predicted_category": "<one of: personal, businexx, academic, government, unknown>",
+        "predicted_category": "<one of: personal, business, academic, government, unknown>",
         "data_quality_notes": "<one sentence describing any data quality concerns or confirming the record looks clean>"
     }}"""
 
@@ -33,7 +33,7 @@ def call_llm(prompt: str, retries: int = 3) -> dict:
         try:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
-                message=[
+                messages=[
                     {"role": "system", "content": "You are a data quality assistant. Respond only with valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
