@@ -24842,3 +24842,29 @@ File Path                                      PID    Runtime      # DAGs    # E
 /opt/airflow/dags/scripts/ingest_data.py                                0           0  0.33s           2026-06-16T04:21:27                       3
 /opt/airflow/dags/etl_pipeline_dag.py                                   1           0  0.13s           2026-06-16T04:21:13                      12
 ================================================================================
+[2026-06-16T04:22:08.968+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/enrich_with_llm.py                            0           0  10.22s          2026-06-16T04:22:00                       3
+/opt/airflow/dags/scripts/detect_anomalies.py                           0           0  1.56s           2026-06-16T04:21:54                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                            1           0  0.42s           2026-06-16T04:21:58                      10
+/opt/airflow/dags/scripts/transform_data.py                             0           0  0.35s           2026-06-16T04:21:59                       3
+/opt/airflow/dags/scripts/ingest_data.py                                0           0  0.33s           2026-06-16T04:21:58                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                   1           0  0.12s           2026-06-16T04:21:43                      12
+================================================================================
+[2026-06-16T04:22:39.036+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/scripts/enrich_with_llm.py    2802  8.44s             0           0  10.22s          2026-06-16T04:22:00                       3
+/opt/airflow/dags/scripts/detect_anomalies.py                           0           0  1.60s           2026-06-16T04:22:26                       3
+/opt/airflow/dags/scripts/load_to_mongodb.py                            1           0  0.41s           2026-06-16T04:22:29                      10
+/opt/airflow/dags/scripts/ingest_data.py                                0           0  0.36s           2026-06-16T04:22:29                       3
+/opt/airflow/dags/scripts/transform_data.py                             0           0  0.35s           2026-06-16T04:22:29                       3
+/opt/airflow/dags/etl_pipeline_dag.py                                   1           0  0.12s           2026-06-16T04:22:14                      12
+================================================================================
