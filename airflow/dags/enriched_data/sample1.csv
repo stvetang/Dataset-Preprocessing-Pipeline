@@ -1,4 +1,4 @@
 name,age,email,age_group,name_length,email_domain,is_anomaly,anomaly_score,predicted_category,data_quality_notes
 Alice,25.0,alice@example.com,Adult,5,example.com,False,0.0404,personal,The record appears clean with no anomalies detected.
-Bob,30.0,bob@example.com,Adult,3,example.com,True,-0.0101,unknown,"The record is flagged as an anomaly, indicating potential data quality concerns."
+Bob,30.0,bob@example.com,Adult,3,example.com,True,-0.0101,personal,"The record appears to have a valid name, age, and email domain, but it is flagged as an anomaly."
 Charlie,27.5,charlie@example.com,Adult,7,example.com,False,0.0592,personal,"The record looks clean, but the age should be an integer."
