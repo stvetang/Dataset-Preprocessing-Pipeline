@@ -1,46 +1,24 @@
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from datetime import datetime
+import os
 import pandas as pd
 from pymongo import MongoClient
 
-def load_to_mongodb():
-    # Connect to MongoDB inside Docker
-    client = MongoClient(host="mongodb", port=27017)
-    db = client["dataset_pipeline"]
-    collection = db["employees"]
+client = MongoClient(host="mongodb", port=27017)
+db = client["dataset_pipeline"]
+collection = db["employees"]
 
-    # Path to dataset
-    file_path = "/opt/airflow/dags/enriched_data/sample1.csv"
+enriched_data_folder = "/opt/airflow/dags/enriched_data"
 
-    # Read dataset using pandas
+# Clear any existing data in the collection
+collection.delete_many({})      
+
+for file_name in os.listdir(enriched_data_folder):
+    if not file_name.endswith(".csv"):
+        continue
+
+    file_path = os.path.join(enriched_data_folder, file_name)
     df = pd.read_csv(file_path)
 
-    # Convert DataFrame to list of dicts (MongoDB format)
     records = df.to_dict("records")
+    collection.insert_many(records)
 
-    collection.delete_many({})       # Clear existing data
-    collection.insert_many(records)  # Insert data into MongoDB
-
-    print(f"Successfully loaded {len(records)} records into MongoDB.")
-
-default_args = {
-    "owner": "airflow",
-    "start_date": datetime(2025, 1, 1),
-    "retries": 1,
-}
-
-with DAG(
-    dag_id="load_to_mongodb",
-    default_args=default_args,
-    schedule_interval=None,
-    catchup=False,
-    tags=["mongodb", "etl"],
-) as dag:
-
-    load_task = PythonOperator(
-        task_id="load_to_mongodb_task",
-        python_callable=load_to_mongodb,
-    )
-
-load_task
+    print(f"Successfully loaded {len(records)} records from {file_name} into MongoDB.")
