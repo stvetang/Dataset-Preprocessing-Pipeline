@@ -88,7 +88,7 @@ def get_all_data(limit: Optional[int] = 100, offset: Optional[int] = 0):
     try:
         cur.execute(
             """
-            SELECT id, name, age, email, age_grup, name_length, email_domain
+            SELECT id, name, age, email, age_group, name_length, email_domain, is_anomaly, anomaly_score, predicted_category, data_quality_notes
             FROM transformed_data
             ORDER BY id
             LIMIT %s OFFSET %s
@@ -123,7 +123,7 @@ def get_data_by_id(record_id: int):
     try:
         cur.execute(
             """
-            SELECT id, name, age, email, age_group, name_length, email_domain
+            SELECT id, name, age, email, age_group, name_length, email_domain, is_anomaly, anomaly_score, predicted_category, data_quality_notes
             FROM transformed_data
             WHERE id = %s
             """
