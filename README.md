@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project is an end-to-end **ETL (Extract, Transform, Load) data pipeline** built with Python and orchestrated using **Apache Airflow**, fully containerized with **Docker**. It ingests raw CSV datasets, performs data cleaning and transformation, and stores processed results in both **PostgreSQL (SQL)** and **MongoDB (NoSQL)** databases. The pipeline is accessible via a **RESTful API** built with FastAPI, enabling programmatic data access and automated file ingestion.
+This project is an end-to-end ETL (Extract, Transform, Load) data pipeline built with Python and orchestrated using Apache Airflow, fully containerized with Docker. It ingests raw CSV datasets, performs data cleaning, transformation, and ML-powered anomaly detection, enriches records using an LLM API, and stores processed results in both PostgreSQL (SQL) and MongoDB (NoSQL) databases. The pipeline is accessible via a RESTful API built with FastAPI, enabling programmatic data access and automated file ingestion.
 
-The project demonstrates a production-ready data engineering architecture with automation, orchestration, containerization, polyglot persistence, and API-driven interactions.
+The project demonstrates a production-ready data engineering architecture with automation, orchestration, containerization, polyglot persistence, machine learning integration, LLM-powered enrichment, and API-driven interactions.
 
 ---
 
@@ -13,33 +13,44 @@ The project demonstrates a production-ready data engineering architecture with a
 ### System Architecture Diagram
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│                     Docker Network (airflow)                │
-│                                                             │
-│  ┌──────────┐    ┌──────────┐    ┌──────────┐               │
-│  │ FastAPI  │    │  Airflow │    │  Airflow │               │
-│  │   API    │◄───┤Webserver │◄───┤Scheduler │               │
-│  └────┬─────┘    └──────────┘    └──────┬───┘               │
-│       │                                 │                   │
-│       │          ┌──────────────────────┼─────────────┐     │
-│       │          │   ETL Pipeline       │             │     │
-│       │          │                      ▼             │     │
-│       │          │  ┌────────┐   ┌──────────┐         │     │
-│       │          │  │ Ingest │──►│Transform │         │     │
-│       │          │  └────────┘   └──────┬───┘         │     │
-│       │          │                      │             │     │
-│       │          │         ┌────────────┴────────┐    │     │
-│       │          │         ▼                     ▼    │     │
-│       │          │  ┌─────────────┐      ┌─────────┐  │     │
-│       ├──────────┼─►│ PostgreSQL  │      │ MongoDB │  │     │
-│       │          │  │ (Relational)│      │(Document)  │     │
-│       └──────────┼─►└─────────────┘      └─────────┘  │     │
-│                  └────────────────────────────────────┘     │
-└─────────────────────────────────────────────────────────────┘
-         ▲                                          ▲
-         │                                          │
-    HTTP Requests                            Airflow Web UI
-  (Port 5000)                                  (Port 8080)
+┌────────────────────────────────────────────────────────────────────┐
+│                        Docker Network (airflow)                    │
+│                                                                    │
+│  ┌──────────┐      ┌──────────┐      ┌──────────┐                  │
+│  │ FastAPI  │      │  Airflow │      │  Airflow │                  │
+│  │   API    │◄─────┤Webserver │◄─────┤Scheduler │                  │
+│  └────┬─────┘      └──────────┘      └──────┬───┘                  │
+│       │                                     │                      │
+│       │            ┌────────────────────────┼──────────────┐       │
+│       │            │   ETL Pipeline         │              │       │
+│       │            │                        ▼              │       │
+│       │            │  ┌────────┐    ┌──────────────┐       │       │
+│       │            │  │ Ingest │───►│  Transform   │       │       │
+│       │            │  └────────┘    └──────┬───────┘       │       │
+│       │            │                       │               │       │
+│       │            │                       ▼               │       │
+│       │            │           ┌───────────────────┐       │       │
+│       │            │           │ Detect Anomalies  │       │       │
+│       │            │           │  (IsolationForest)│       │       │
+│       │            │           └──────────┬────────┘       │       │
+│       │            │                      │                │       │
+│       │            │                      ▼                │       │
+│       │            │           ┌───────────────────┐       │       │
+│       │            │           │  Enrich with LLM  │       │       │
+│       │            │           │   (OpenAI API)    │       │       │
+│       │            │           └────┬──────────┬───┘       │       │
+│       │            │                │          │           │       │
+│       │            │                ▼          ▼           │       │
+│       │            │  ┌─────────────────┐ ┌─────────┐      │       │
+│       ├────────────┼─►│   PostgreSQL    │ │ MongoDB │      │       │
+│       └────────────┼─►│  (Relational)  │ │(Document│       │       │
+│                    │  └─────────────────┘ └─────────┘      │       │
+│                    └───────────────────────────────────────┘       │
+└────────────────────────────────────────────────────────────────────┘
+         ▲                                               ▲
+         │                                               │
+    HTTP Requests                                 Airflow Web UI
+    (Port 5000)                                    (Port 8080)
 ```
 
 ### ETL Pipeline Flow
@@ -57,10 +68,22 @@ Ingest (clean & normalize)
    ▼
 Transform (feature engineering)
    │
-   ├──────────────┬──────────────┐
-   ▼              ▼              ▼
-PostgreSQL    MongoDB        API Access
-(Relational)  (Document)    (GET /api/data)
+   ▼
+Detect Anomalies (ML - IsolationForest)
+   │
+   ▼
+Enrich with LLM (OpenAI API - categorization & quality notes)
+   │
+   ├──────────────────┐
+   ▼                  ▼
+PostgreSQL         MongoDB
+(Relational)       (Document)
+   │                  │
+   └──────────────────┘
+            │
+            ▼
+      API Access
+   (GET /api/data)
 ```
 
 ---
@@ -79,8 +102,13 @@ PostgreSQL    MongoDB        API Access
 
 **Data Processing:**
 - pandas
+- numpy
+- scikit-learn
 - psycopg2
 - pymongo
+
+**AI/LLM Integration:
+- OpenAI API (gpt-4o-mini) 
 
 **Infrastructure:**
 - Docker
@@ -100,13 +128,17 @@ dataset_pipeline/
 ├── airflow/
 │   ├── dags/
 │   │   ├── etl_pipeline_dag.py
-│   │   ├── load_to_mongodb.py
-│   │   ├── raw_data/        # Input CSV files
-│   │   ├── processed_data/  # Cleaned data
-│   │   ├── transformed_data/# Feature-engineered data
+│   │   ├── .airflowignore       # Prevents scanner from parsing scripts/
+│   │   ├── raw_data/            # Input CSV files
+│   │   ├── processed_data/      # Cleaned data
+│   │   ├── transformed_data/    # Feature-engineered data
+│   │   ├── anomaly_data/        # Data with anomaly detection results
+│   │   ├── enriched_data/       # Final enriched data (LLM output)
 │   │   └── scripts/
 │   │       ├── ingest_data.py
 │   │       ├── transform_data.py
+│   │       ├── detect_anomalies.py   # ML anomaly detection stage
+│   │       ├── enrich_with_llm.py    # LLM enrichment stage
 │   │       ├── load_to_postgres.py
 │   │       └── load_to_mongodb.py
 │   ├── logs/
@@ -114,6 +146,8 @@ dataset_pipeline/
 ├── postgres/
 │   ├── 01-create-db.sql
 │   └── 02-create-tables.sql
+├── .env                     # API key storage (never committed to git)
+├── .gitignore
 ├── docker-compose.yaml      # Orchestrates all services
 └── requirements.txt         # Airflow dependencies
 ```
@@ -122,15 +156,16 @@ dataset_pipeline/
 
 ## Key Features
 
-- **Automated ETL Orchestration** - Apache Airflow manages task scheduling and dependencies  
+- **Automated ETL Orchestration** - Apache Airflow manages task scheduling and dependencies
+- **ML-Powered Anomaly Detection** — scikit-learn IsolationForest flags outlier records inline in the pipeline before loading
+- **LLM Data Enrichment** — OpenAI API classifies each record and generates plain-English data quality notes automatically  
 - **RESTful API** - FastAPI provides programmatic access to pipeline data and operations  
 - **Containerized Architecture** - Fully Dockerized microservices with Docker Compose  
 - **Polyglot Persistence** - Dual database integration (PostgreSQL for relational, MongoDB for document storage)  
-- **File Upload API** - Automated CSV ingestion via HTTP POST requests  
+- **File Upload API** - Automated CSV ingestion via HTTP POST requests    
+- **Retry Logic** - Airflow handles failures with automatic retries
 - **Health Monitoring** - API endpoints for service health checks  
 - **Interactive Documentation** - Auto-generated Swagger UI at `/docs`  
-- **Data Validation** - Pandas-based CSV validation during upload  
-- **Task Retry Logic** - Airflow handles failures with automatic retries  
 
 ---
 
@@ -147,10 +182,32 @@ dataset_pipeline/
 
 **Task Dependencies:**
 ```
-ingest_data >> transform_data >> [load_to_postgres, load_to_mongodb]
+ingest >> transform >> detect_anomalies >> enrich_with_llm >> [load_postgres, load_mongodb]
 ```
 
-This design demonstrates **parallel loading** into SQL and NoSQL databases from a single transformation step.
+The final two load tasks run in parallel, demonstrating concurrent writes to SQL and NoSQL databases from a single enriched dataset.
+
+---
+
+## ML & AI Pipeline Stages
+
+**Anomaly Detection (detect_anomalies.py)**
+
+Uses scikit-learn's IsolationForest — an unsupervised machine learning algorithm — to flag records that deviate significantly from the rest of the dataset. No labeled training data is required; the model learns what "normal" looks like from the data itself.
+
+Features used: age, name_length, email_domain (label-encoded).
+
+New columns added:
+- is_anomaly (Boolean) — True if the record is flagged as an outlier
+- anomaly_score (Float) — Raw isolation score; more negative means more anomalous
+
+**LLM Enrichment (enrich_with_llm.py)**
+
+Calls the OpenAI API (gpt-4o-mini) for each record with a dynamically generated prompt. The model returns structured JSON containing a user category classification and a data quality assessment. Includes retry logic with exponential backoff to handle transient API failures gracefully.
+
+New columns added:
+- predicted_category — one of: personal, business, academic, government, unknown
+- data_quality_notes — plain-English assessment of the record's quality
 
 ---
 
@@ -319,10 +376,11 @@ API endpoints support `limit` and `offset` parameters for efficient large datase
 - [ ] Cloud deployment (AWS ECS, RDS, DocumentDB)
 - [ ] CI/CD pipeline with GitHub Actions
 - [x] ~~API-based ingestion~~
+- [x] ~~ML anomaly detection pipeline stage~~
+- [x] ~~LLM enrichment pipeline stage~~
 - [ ] JWT authentication for API
 - [ ] Data validation with Great Expectations
 - [ ] Monitoring and alerting (Prometheus, Grafana)
-- [ ] ML model training pipeline integration
 - [ ] Unit and integration tests
 - [ ] API rate limiting
 - [ ] Data versioning
